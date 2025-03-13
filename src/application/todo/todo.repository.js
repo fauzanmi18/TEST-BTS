@@ -29,7 +29,7 @@ const deleteChecklist = (id) => {
 }
 
 const getChecklistItems = (checklistId) => {
-    const result = todoItems.filter(item => item.todoId == checklistId)
+    const result = todoItems.filter(item => item.checklistId == checklistId)
 
     return result
 }

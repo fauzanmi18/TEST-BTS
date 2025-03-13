@@ -26,6 +26,7 @@ const deleteChecklist = (id) => {
 }
 
 const getChecklistItems = (checklistId) => {
+    console.log(`naha`, checklistId)
     return todoRepository.getChecklistItems(checklistId)
 }
 
@@ -41,6 +42,7 @@ const createChecklistItem = (checklistId, data) => {
 }
 
 const getChecklistItemById = (checklistItemId) => {
+    console.log(`ie`, checklistItemId)
     const ischecklistItemIdExist = todoRepository.findChecklistItemId(checklistItemId)
 
     if(ischecklistItemIdExist.length == 0){
