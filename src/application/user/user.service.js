@@ -1,4 +1,5 @@
 import userRepository from "./user.repository.js"
+import bcrypt from 'bcrypt'
 
 const addUser = async(request) => {
     const isUserExist = await userRepository.countUser(
