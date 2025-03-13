@@ -1,4 +1,4 @@
-import userService from "./user.service"
+import userService from "./user.service.js"
 
 const registerUser = async(req, res, next) => {
     try {
