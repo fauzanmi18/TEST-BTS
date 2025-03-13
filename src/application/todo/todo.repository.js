@@ -17,6 +17,12 @@ const createChecklists = (data) => {
 }
 
 const deleteChecklist = (id) => {
+    const index = todos.findIndex(item => item.id === id)
+
+    if (index !== -1) {
+        todos.splice(index, 1)
+    }
+
     const result = todos.filter(item => item.id !== id)
 
     return result
