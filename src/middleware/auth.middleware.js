@@ -5,6 +5,8 @@ export const authMiddleware = (req, res, next) => {
     try {
         let token = req.headers['authorization']
 
+        console.log(`token`, token)
+
         if (!token || !token.startsWith('Bearer ') || !token.split(' ')[1]) {
             throw responseError(401, 'Unauthorized')
         }
