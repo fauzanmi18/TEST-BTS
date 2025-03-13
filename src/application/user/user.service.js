@@ -1,6 +1,4 @@
 const addUser = async(request) => {
-    validate(userValidation, request)
-
     const isUserExist = await userRepository.countUser(
         {username: request.username}
     )

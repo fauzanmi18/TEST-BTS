@@ -1,3 +1,5 @@
+import userService from "./user.service"
+
 const registerUser = async(req, res, next) => {
     try {
         const request = req.body
