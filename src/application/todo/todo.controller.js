@@ -124,8 +124,9 @@ const deleteChecklistItem = (req, res, next) => {
 const renameChecklistItem = (req, res, next) => {
     try {
         const checklistItemId = req.params.checklistItemId
+        const name = req.body.name
 
-        const result = todoService.renameChecklistItem(checklistItemId)
+        const result = todoService.renameChecklistItem(checklistItemId, name)
 
         res.status(201).json({
             message: 'Success rename checklist item',
