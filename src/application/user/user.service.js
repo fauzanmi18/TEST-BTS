@@ -1,3 +1,5 @@
+import userRepository from "./user.repository.js"
+
 const addUser = async(request) => {
     const isUserExist = await userRepository.countUser(
         {username: request.username}
@@ -18,8 +20,6 @@ const addUser = async(request) => {
 }
 
 const login = async(request) => {
-    validate(userValidation, request)
-
     const whereCondition = {username: request.username}
     const selectReturn = {
         id: true,
